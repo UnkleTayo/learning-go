@@ -2,6 +2,7 @@ package main
 
 import "github.com/unkletayo/learninggo/printer"
 
-func main(){
+func main() {
 	printer.Hello()
-} 
+}
+
