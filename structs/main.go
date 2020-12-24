@@ -1,8 +1,9 @@
 // Structs is adata struture that allows composition of different data types it synonymous to class in JS
 package main
 
-import("fmt")
-
+import (
+	"fmt"
+)
 
 // Creating a value of type person
 type person struct{
