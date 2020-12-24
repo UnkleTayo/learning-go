@@ -11,20 +11,20 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName  string
-	contactInfo contactInfo
+	contactInfo
 }
 
 
 func main() {
-	alex := person{firstName: "Kakashi", lastName: "Hatake"}
-	fmt.Println(alex)
+	// alex := person{firstName: "Kakashi", lastName: "Hatake"}
+	// fmt.Println(alex)
 
 	
-var bobby person
-fmt.Println(bobby)
+// var bobby person
+// fmt.Println(bobby)
 
 // listing out the values inside the Go 
-fmt.Printf("%+v", alex)
+// fmt.Printf("%+v", alex)
 
 // Embedding structs 
 	jim := person{
@@ -36,5 +36,14 @@ fmt.Printf("%+v", alex)
 		},
 	}
 
-	fmt.Printf("%+v", jim)
+	jim.updateName("jimmy")
+	jim.print()
+}
+func(p *person) updateName(newFirstName string){
+	p.firstName = newFirstName
+}
+
+// receiver function 
+func (p person) print(){
+	fmt.Printf("%+v", p)
 }
