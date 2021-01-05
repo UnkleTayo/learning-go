@@ -1,4 +1,4 @@
-// creating an array 
+// creating an array
 // var name [size] type
 package main
 
@@ -7,9 +7,10 @@ import (
 )
 
 func main(){
-	var x [5]int
-	fmt.Println(x)
-	x[3] = 43
-	fmt.Println(x)
+// declaring an array with elements
+days := [...]string{"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"}
+
+fmt.Println(days[0]) // prints 'monday'
+fmt.Println(days[5]) // prints 'saturday'
 
 }
