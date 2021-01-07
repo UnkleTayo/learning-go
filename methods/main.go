@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// This comment should make it stop screeming
 type Employee struct {
 	Name string
 }
@@ -11,6 +12,7 @@ func (e *Employee) UpdateName(newName string) {
 	e.Name = newName
 }
 
+// create a reference function
 func (e *Employee) PrintName() {
 	fmt.Println(e.Name)
 }
