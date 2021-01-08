@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
 
 func main() {
 // creating byte of slice 
-mydata:= []byte("This code is sweet to write")
+mydata:= []byte("This code is sweet to write\n")
 
 
 // takes three permission
@@ -28,4 +29,27 @@ if err != nil{
 
 // convert it to string 
 	fmt.Print(string(data))
+
+
+
+	// writing to an existig file 
+	f, err := os.OpenFile("myfile.data", os.O_APPEND|os.O_WRONLY, 0600)
+
+	if err != nil{
+		panic(err)
+	}
+
+	defer f.Close()
+
+	if _, err = f.WriteString("This was meant to be a joke but lets see\n"); err != nil{
+		panic(err)
+	}
+
+	data, err = ioutil.ReadFile("myfile.data")
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Print(string(data))
+
 }
