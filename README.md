@@ -8,10 +8,10 @@
 
 The below resoures have been really helpful in my learning journey I will keep adding them as they come by
 
-_Docs & Blogs_
+_Blogs/Docs_
 
-- [https://golang.org/] (Language Specification)
-- [https://tutorialedge.net] (Tutorial Net)
-- [https://golangbot.com/] (GoLangBots)
+- [Lang Specification](https://golang.org/)
+- [Tutorialnet](https://tutorialedge.net)
+- [Golang Bot](https://golangbot.com/)
 
 _Videos_
