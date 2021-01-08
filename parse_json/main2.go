@@ -4,12 +4,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
 
-func main() {
+func main2() {
 	// Open our jsonFile
-	jsonFile, err := osOpen("users.json")
+	jsonFile, err :=  os.Open("users.json")
 
 	// if we open Os.open it returns an err so we have to handle it 
 	if err != nil {

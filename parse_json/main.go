@@ -69,6 +69,4 @@ for i:=0; i < len(users.Users); i++ {
     fmt.Println("User Name: " + users.Users[i].Name)
     fmt.Println("Facebook Url: " + users.Users[i].Social.Facebook)
 }
-
-
 }
