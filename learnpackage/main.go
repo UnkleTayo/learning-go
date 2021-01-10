@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"learnpackage/simpleinterest"
 	"log"
+
+	"github.com/unkletayo/learninggo/learnpackage/simpleinterest"
 )
 
 var p,r,t = 5000.0, 10.0, 1.0
