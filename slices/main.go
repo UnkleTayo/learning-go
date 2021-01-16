@@ -5,7 +5,8 @@ import "fmt"
 func main() {
 
 
-	goSlices()
+	countriesNeeded := countries()
+	fmt.Println(countriesNeeded)
 }
 
 func basicArray (){
@@ -35,7 +36,7 @@ func forLooping(){
 }
 
 func rangeLooping(){
-	a := [...]float64{67.7, 89.8, 21, 78}
+	a := [...]float64{67.7, 89.8, 21, 78} // assigns a length of 4 to a
 	sum := float64(0)
 	for i, v := range a {
 		// range retursn both index and value
@@ -74,6 +75,17 @@ func printarray(a [3][2]string) {
 	}
 }
 
+// muitidmensional array
+func muitidmensional(a [3][2]string){
+	for _, v1  := range a {
+		for _, v2 := range v1{
+			fmt.Printf("%s, ", v2)
+		}
+		fmt.Printf("%s, ", v1)
+
+	}
+}
+
 func  goSlices()  {
 	a := [5]int{7,98,45,5,7}
 	var b []int = a[1:4] //creates slice from index 1 to 3
@@ -83,4 +95,23 @@ func  goSlices()  {
 func createSlice() {  
 	c := []int{6, 7, 8} //creates and array and returns a slice reference
 	fmt.Println(c)
+}
+
+
+// slices 
+
+func sliceExample() {  
+	fruitarray := [...]string{"apple", "orange", "grape", "mango", "water melon", "pine apple", "chikoo"}
+	fruitslice := fruitarray[1:3]
+	fmt.Printf("length of slice %d capacity %d\n", len(fruitslice), cap(fruitslice)) //length of is 2 and capacity is 6
+	fruitslice = fruitslice[:cap(fruitslice)] //re-slicing furitslice till its capacity
+	fmt.Println("After re-slicing length is",len(fruitslice), "and capacity is",cap(fruitslice))
+}
+
+func countries() []string {  
+	countries := []string{"USA", "Singapore", "Germany", "India", "Australia"}
+	neededCountries := countries[:len(countries)-2]
+	countriesCpy := make([]string, len(neededCountries))
+	copy(countriesCpy, neededCountries) //copies neededCountries to countriesCpy
+	return countriesCpy
 }

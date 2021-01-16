@@ -1,6 +1,9 @@
 package main
 
-import("fmt"; "path")
+import (
+	"fmt"
+	"path"
+)
 
 func main(){
 	var dir,file string
