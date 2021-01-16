@@ -7,7 +7,6 @@ func main() {
 if i%2 === 0
 	}
 	fmt.Printf( " %d ", i)
-	nested()
 }
 
 // break  

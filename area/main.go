@@ -5,40 +5,31 @@ import (
 	"math"
 )
 
-type circle struct{
-	radius float64
+type Rectangle struct {  
+    length int
+    width  int
 }
 
-
-type square struct{
-	length float64
+type Circle struct {  
+    radius float64
 }
 
-func (c circle) area() float64 {
-return math.Pi * c.radius * c.radius
+func (r Rectangle) Area() int {  
+    return r.length * r.width
 }
 
-func (s square) area() float64 {
-return s.length * s.length
+func (c Circle) Area() float64 {  
+    return math.Pi * c.radius * c.radius
 }
 
-type shape interface{
-	area() float64
+func main() {  
+    r := Rectangle{
+        length: 10,
+        width:  5,
+    }
+    fmt.Printf("Area of rectangle %d\n", r.Area())
+    c := Circle{
+        radius: 12,
+    }
+    fmt.Printf("Area of circle %f", c.Area())
 }
-
-func info(s shape){
-	fmt.Println(s.area())
-}
-
-func main(){
-circ := circle{
-	radius: 12.5,
-}
-
-squa := square{
-	length: 15,
-}
-
-info(circ)
-info(squa )
-} 

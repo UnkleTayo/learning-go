@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func SwitchCase() {
 	finger := 5
 	fmt.Printf("Finger %d is ", finger)
 	switch finger {
@@ -37,5 +37,4 @@ func fallThrogh() {
 	case num < 200:
 			fmt.Printf("%d is lesser than 200", num)
 	}
-
 }
