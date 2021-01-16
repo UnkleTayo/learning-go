@@ -9,14 +9,32 @@ func myfunction(firstName string, lastName string) (string, error) {
 }
 
 func main() {
-  fmt.Println("Hello World")
 
-  // we can assign the results to multiple variables
-  // by defining their names in a comma separated list
-  // like so: 
-  fullName, err := myfunction("Elliot", "Forbes")
-  if err != nil {
-    fmt.Println("Handle Error Case")
-  }
-  fmt.Println(fullName)
+  welcome := []string{"hello", "world"}
+  change(welcome...)
+  fmt.Println(welcome)
+}
+
+
+// Variadic function
+// creating a variadic function 
+func find(num int, nums ...int){
+  fmt.Printf("type of nums is %T\n", nums)
+  found := false
+    for i, v := range nums {
+        if v == num {
+            fmt.Println(num, "found at index", i, "in", nums)
+            found = true
+        }
+    }
+    if !found {
+        fmt.Println(num, "not found in ", nums)
+    }
+    fmt.Printf("\n")
+}
+
+func change(s ...string) {  
+  s[0] = "Go"
+  s = append(s, "playground")
+  fmt.Println(s)
 }
