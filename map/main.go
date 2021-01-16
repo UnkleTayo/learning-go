@@ -101,4 +101,13 @@ fmt.Println("Original employee salary", employeeSalary)
 modified := employeeSalary
 modified["mike"] = 18000
 fmt.Println("Employee salary changed", employeeSalary)
+
+	newEmp := "joe"	
+	value, ok := employeeSalary[newEmp]
+	if ok == true {
+			fmt.Println("Salary of", newEmp, "is", value)
+			return
+	}
+	fmt.Println(newEmp, "not found")
 }
+
