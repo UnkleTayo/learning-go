@@ -48,3 +48,11 @@ Similar to slices, maps are reference types. When a map is assigned to a new var
 Maps can't be compared using the == operator. The == can be only used to check if a map is nil.
 
 One way to check whether two maps are equal is to compare each one's individual elements one by one.
+
+
+## Map Lookup
+
+When looking up a key in a map, you have two options: you can assign a single variable or two variables for the lookup call.
+ The first variable is always the value returned for the key lookup, and the second value, if specified, is a Boolean flag that reports whether the key exists or not. 
+ When a key doesn’t exist, the map will return the zero value for the type of value being stored in the map.
+When the key does exist, the map will return a copy of the value for that key.

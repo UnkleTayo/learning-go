@@ -1,7 +1,8 @@
 # What is a pointer?
-
 A pointer is a variable which stores the memory address of another variable.
-
+Pointer variables are great for sharing variables between functions.
+They allow functions to access and change the state of a variable that was declared
+within the scope of a different function and possibly a different goroutine. 
 ## Declaring pointers
 
 \*T is the type of the pointer variable which points to a value of type T.

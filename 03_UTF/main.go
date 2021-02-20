@@ -5,7 +5,7 @@ import (
 )
 
 func main(){
-// Just like the previous section where I mentioned that the values of number in diffent bases can be gotten. Go also makes it easy to get the UTF values of numbers with the use of  %q 
+// Just like the previous section where I mentioned that the values of number in different bases can be gotten. Go also makes it easy to get the UTF values of numbers with the use of  %q 
 
 // In the code snippet below I looped through the numbers between 60 and 122 to get the corresponding UTF 8 values
 
