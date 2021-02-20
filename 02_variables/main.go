@@ -2,10 +2,7 @@ package main
 
 import "fmt"
 
-// Variable is the name given to a memory location to store a value of a specific type.
-
-// Declaring a variable with an initial value
-// A variable can also be provided an initial value when it is declared. The following is the syntax to declare a variable with an initial value.
+// or making a function call.
 
 func main() {
 	// single variable declaration with initial value
