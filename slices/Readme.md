@@ -122,6 +122,5 @@ slice := make([]int, 0)
 slice := []int{}
 ```
 
-## Modifying a slice
+## Working with slices
 
-A slice does not own any data of its own. It is just a representation of the underlying array. Any modifications done to the slice will be reflected in the underlying array.
