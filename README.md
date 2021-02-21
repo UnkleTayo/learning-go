@@ -1,11 +1,11 @@
 # Not your Regular Readme File
 
 > This Repository contains my Go Lang snippets, its not the best you can see out.
-> I will keep on adding as time goes on, Baby steps 😎.
+> It will keep getting  better with time,trusting Baby steps 😎.
 
-## Resources:
+## Resources
 
-The below resoures have been really helpful in my learning journey I will keep adding them as they come by
+The below resources have been really helpful in my learning journey I will keep adding them as they come by
 
 _Blogs/Docs_
 
