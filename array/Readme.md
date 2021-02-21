@@ -54,3 +54,63 @@ array := [3][2]int{1: {0: 20}, 3: {1: 41}}
 ## Passing array between functions
 
 Passing an array between functions can be an expensive operation in terms of memory and performance. When you pass variables between functions they’re always passed by value. When your variable is an array, this means the entire array, regardless of its size, is copied and passed to the function.
+
+## Creating array using shorthand method
+
+```Go
+...
+
+func main() {
+    b := [3]int{12, 78, 50} // short hand declaration to create array
+    fmt.Println(b)
+}
+```
+
+it is not necessary that all values have to be assigned during a short declaration
+
+```Go
+...
+
+func main() {
+    b := [3]int{90} // short hand declaration to create array
+    fmt.Println(b) // [90 0 0]
+}
+```
+
+The length of the array can be ignored during declaration and replaced with ... and let the compiler find the length and replace it.
+
+```Go
+...
+
+func main() {
+    a := [...]int{12, 78, 50} // ... makes the compiler determine the length
+    fmt.Println(a)
+}
+```
+
+<strong>The size of the array is a part of the type</strong>. Hence [5]int and [10]int are distinct types.
+
+## Arrays are value types
+
+Arrays in Go are value types this means when they are assigned to a new variable, a copy of the original array is assigned to the new variable. If changes are made to the new variable, it will not be reflected in the original array.
+
+Also, when arrays are passed as function parameters, they are passed by value and the original array is unchnaged
+
+## Length of an array
+
+The length of the array is found by passing the array as parameter to the len function.
+
+```Go
+...
+
+func main() {
+    a := [...]float64{67.7, 89.8, 21, 78}
+    fmt.Println("length of a is",len(a)) // length of a is 4
+
+}
+```
+
+## Iterating arrays using range
+
+The for loop can be used to iterate over elements of an array.
+Range can also be used
