@@ -50,3 +50,5 @@ array := [3][2]int{1: {20, 21}, 2: {40, 41}}
 // and inner array.
 array := [3][2]int{1: {0: 20}, 3: {1: 41}}
 ```
+## Passing array between functions
+Passing an array between functions can be an expensive operation in terms of memory and performance. When you pass variables between functions they’re always passed by value. When your variable is an array, this means the entire array, regardless of its size, is copied and passed to the function. 
