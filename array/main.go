@@ -56,6 +56,4 @@ fmt.Println("Array 2", arr2)
 
 fmt.Println("Array 3", arr3)
 fmt.Println("Array 4", arr4)
-
-
 }
