@@ -1,7 +1,9 @@
 # Not your Regular Readme File
 
-> This Repository contains my Go Lang snippets, its not the best you can see out.
-> It will keep getting  better with time,trusting Baby steps 😎.
+> This Repository contains my Go Lang snippets, its not the best you can see out but it's worth giving a look.
+
+> Each folder contains a markdown file explaining concepts in the folder main.go file
+> It will keep getting  better with time,trusting my baby steps 😎.
 
 ## Resources
 
@@ -13,4 +15,6 @@ _Blogs/Docs_
 - [Tutorialnet](https://tutorialedge.net)
 - [Golang Bot](https://golangbot.com/)
 
-_Videos_
+*Books*
+
+- Go in action by WILLIAM KENNEDY WITH BRIAN KETELSE AND ERIK ST. MARTIN
