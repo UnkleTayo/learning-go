@@ -270,3 +270,31 @@ The keyword <code>range</code>, when iterating over a slice, will return two val
 
 It’s important to know that range is making a copy of the value, not returning a reference. If you use the address of the value variable as a pointer to each element, you’ll be making a mistake. 
 
+
+## Multidimensional Slices
+
+creating a slice of integers 
+
+```Go
+slice := [][]int{10, {200,400}}
+```
+We now have an outer slice of two elements that contain an inner slice of integers.
+
+The outer slice contains two elements, each of which are slices. The slice in the first element is initialized with the single integer 10 and the slice in the second element contains two integers, 200 and 400.
+
+## Passing slices between function
+
+```Go
+// Allocate a slice of 1 million integers.
+slice := make([]int, 1e6)
+// Pass the slice to the function foo.
+slice = foo(slice)
+// Function foo accepts a slice of integers and returns the slice back.
+func foo(slice []int) []int {
+...
+return slice
+}
+
+```
+
+On a 64-bit architecture, a slice requires 24 bytes of memory. The pointer field requires 8 bytes, and the length and capacity fields require 8 bytes respectively. Since the data associated with a slice is contained in the underlying array, there are no problems passing a copy of a slice to any function. Only the slice is being copied, not the underlying array.

@@ -23,7 +23,7 @@ func forLooping() {
 	h := [...]float64{67.8, 89.8, 21, 78}
 
 	for i := 0; i < len(h); i++ {
-		fmt.Printf("%d th element of h is %.2f\n", i, h[i])
+		fmt.Printf("%d the element of h is %.2f\n", i, h[i])
 	}
 }
 
@@ -149,6 +149,18 @@ func rangeCopy() {
 	for index, value := range slice {
 		fmt.Printf("Value :%d Value-Addr: %X ElememtAddr: %X\n", value, &value, &slice[index])
 	}
+
+	for index := 2; index < len(slice); index++ {
+		fmt.Printf("Index: %d Value: %d\n", index, slice[index])
+	}
+}
+
+func mutiDimensionalSlice() {
+	// Create a slice of a slice of integers.
+	slice := [][]int{{10}, {100, 200}}
+	// Append the value of 20 to the first slice of integers.
+	slice[0] = append(slice[0], 20)
+	fmt.Println(slice)
 }
 
 func main() {
@@ -157,5 +169,6 @@ func main() {
 	// fmt.Println(countriesNeeded)
 	// newExample()
 	// threeIndexSlice()
-	rangeCopy()
+	// rangeCopy()
+	mutiDimensionalSlice()
 }
