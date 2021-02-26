@@ -114,3 +114,23 @@ func main() {
 
 The for loop can be used to iterate over elements of an array.
 Range can also be used
+
+## Passing an array between function 
+
+Passing an array between functions can be an expensive operation in terms of memory and performance. When you pass variables between functions, they’re always passed by value. When your variable is an array, this means the entire array, regardless of its size, is copied and passed to the function. 
+
+ To see this in action, let’s create an array of one million elements of type int. On a 64-bit architecture, this would require eight million bytes, or eight megabytes, of memory. What happens when you declare an array of that size and pass it to a function?
+
+ ```Go
+// Declare an array of 8 megabytes.
+var array [1e6]int
+// Pass the array to the function foo.
+foo(array)
+// Function foo accepts an array of one million integers.
+func foo(array [1e6]int) {
+return array
+}
+ ```
+
+ }
+Every time the function foo is called, eight megabytes of memory has to be allocated on the stack. Then the value of the array, all eight megabytes of memory, has to be copied into that allocation. Go can handle this copy operation, but there’s a better and more efficient way of doing this. You can pass a pointer to the array and only copy eight bytes, instead of eight megabytes of memory on the stack.
