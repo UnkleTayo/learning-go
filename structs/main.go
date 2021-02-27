@@ -6,65 +6,84 @@ import (
 )
 
 // Creating a value of type person
-type person struct{
+type person struct {
 	first string
-	last string
-	age int
+	last  string
+	age   int
 }
 
-// Embeded 🇬🇸 
-type secretAgent struct{
+// User type
+type user struct {
+	name       string
+	email      string
+	ext        int
+	privileged bool
+}
+
+type Duration int64
+
+// Embeded 🇬🇸
+type secretAgent struct {
 	// assigning type of person to secretAgent
 	person
-	ltk bool
+	ltk   bool
 	first string
 }
-// Keyword identifier type 
+
+// Keyword identifier type
 // func (r reciever) identifier(parmeter) (return (s)) {code}
-func(s secretAgent) speak(){
+func (s secretAgent) speak() {
 	fmt.Println("I am", s.first, s.last)
 }
 
-func main(){
-sa1:= secretAgent{
-	person: person{
-		first: "Kakashi",
-		last: "Hatake",
-		age: 40,
-	},
-	first: "Ninja",
-	ltk: true,
-}
-	  
-	p1:= person {
-		first: "Bond",
-		last:"Manny",
-		age: 23,
+func main() {
+	sa1 := secretAgent{
+		person: person{
+			first: "Kakashi",
+			last:  "Hatake",
+			age:   40,
+		},
+		first: "Ninja",
+		ltk:   true,
 	}
 
-	p2:= person {
+	p1 := person{
+		first: "Bond",
+		last:  "Manny",
+		age:   23,
+	}
+
+	p2 := person{
 		first: "Kakashi",
-		last:"Hatake",
-		age: 45,
+		last:  "Hatake",
+		age:   45,
+	}
+
+	lisa := user{
+		name:       "Lisa",
+		email:      "lisa@example.com",
+		ext:        123,
+		privileged: false,
 	}
 
 	fmt.Println(p1)
 	fmt.Println(p2)
-	fmt.Println(p1.first, p1.last) 
+	fmt.Println(lisa)
+	fmt.Println(p1.first, p1.last)
 	fmt.Println(p2.first, p2.last)
 	fmt.Println(sa1)
 	sa1.speak()
-	// Acessong the props inside 
+	// Acessong the props inside
 	fmt.Println(sa1.first, sa1.last, sa1.person.first)
 
-	p3:=struct{
+	p3 := struct {
 		first string
-		last string
-		age int
+		last  string
+		age   int
 	}{
 		first: "Kakashi",
-		last: "Hatake",
-		age: 45,
+		last:  "Hatake",
+		age:   45,
 	}
 
 	fmt.Println(p3)

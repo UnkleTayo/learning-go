@@ -25,7 +25,7 @@ Once an array is declared, neither the type of data being stored nor its length 
 
 When an array is initialized, each individual element that belongs to the array is initialized to its zero value.
 
-An easy way t0 create and initialize and array is through the use of literals. Array literals allow you to declare the number of elements you need and specify value for the elements
+An easy way to create and initialize and array is through the use of literals. Array literals allow you to declare the number of elements you need and specify value for the elements
 
 ## Accessing array pointer elements
 
@@ -51,9 +51,6 @@ array := [3][2]int{1: {20, 21}, 2: {40, 41}}
 array := [3][2]int{1: {0: 20}, 3: {1: 41}}
 ```
 
-## Passing array between functions
-
-Passing an array between functions can be an expensive operation in terms of memory and performance. When you pass variables between functions they’re always passed by value. When your variable is an array, this means the entire array, regardless of its size, is copied and passed to the function.
 
 ## Creating array using shorthand method
 
@@ -77,7 +74,7 @@ func main() {
 }
 ```
 
-The length of the array can be ignored during declaration and replaced with ... and let the compiler find the length and replace it.
+The length of the array can be ignored during declaration and replaced with  <code>...</code> and let the compiler find the length and replace it.
 
 ```Go
 ...
