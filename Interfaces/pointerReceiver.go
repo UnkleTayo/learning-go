@@ -4,29 +4,35 @@ import "fmt"
 
 // Implementing interfaces using pointer receivers vs value receivers
 
-type Describer interface {  
+// Describer should also have comment
+type Describer interface {
 	Describe()
 }
-type Person struct {  
+
+// Person should have comment
+type Person struct {
 	name string
 	age  int
 }
 
-func (p Person) Describe() { 
-	//implemented using value receiver  
+// Describe Implemented by Person
+func (p Person) Describe() {
+	//implemented using value receiver
 	fmt.Printf("%s is %d years old\n", p.name, p.age)
 }
 
-type Address struct {  
+// Address struct
+type Address struct {
 	state   string
 	country string
 }
 
-func (a *Address) Describe() { //implemented using pointer receiver  
+// Describe also implments address
+func (a *Address) Describe() { //implemented using pointer receiver
 	fmt.Printf("State %s Country %s", a.state, a.country)
 }
 
-func main(){
+func pReceiver() {
 	var d1 Describer
 	p1 := Person{"Sam", 25}
 	d1 = p1
@@ -38,6 +44,6 @@ func main(){
 	var d2 Describer
 	a := Address{"Washington", "USA"}
 
-	d2=&a
+	d2 = &a
 	d2.Describe()
 }
