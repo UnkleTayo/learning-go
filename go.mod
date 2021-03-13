@@ -1,3 +1,3 @@
-module github.com/unkletayo/lerninggo
+module github.com/unkletayo/learninggo
 
 go 1.16
