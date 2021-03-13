@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 type employee struct {
 	salary  int
@@ -8,19 +11,21 @@ type employee struct {
 }
 
 func main() {
-	// declaring a map
-	// var colors map[string]string
-	// colors := make(map[string]string)
-	// colors := map[string]string{
-	// 	"red":   "#ff0000",
-	// 	"green": "#4bf745",
-	// 	"white": "#fff",
-	// }
+	// myMap := make(map[string]string)
 
-	// printMap(colors)
-	// printSalary()
-	// employeeStruct()
-	mapReference()
+	// myMap["dog"] = "Buffer"
+	// log.Println(myMap["dog"])
+	// mapReference()
+
+	newMap := make(map[string]employee)
+
+	you := employee{
+		salary:  30,
+		country: "USA",
+	}
+
+	newMap["hello"] = you
+	log.Println(newMap["hello"].country)
 }
 
 func printMap(c map[string]string) {
