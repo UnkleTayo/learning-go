@@ -6,7 +6,7 @@ import (
 	"sync"
 )
 
-func main() {
+func Concur() {
 	runtime.GOMAXPROCS(1)
 
 	// wg is used to wait for the program to finish

@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func hello(done chan bool) {  
+func hello(done chan bool) {
 	fmt.Println("hello go routine is going to sleep")
 	time.Sleep(4 * time.Second)
 	fmt.Println("hello go routine awake and going to write to done")
@@ -13,7 +13,7 @@ func hello(done chan bool) {
 
 }
 
-func main() {  
+func BufferChan() {
 	done := make(chan bool)
 	fmt.Println("Main going to call hello go goroutine")
 	go hello(done)
