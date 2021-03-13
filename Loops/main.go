@@ -1,21 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"log"
+)
 
 func main() {
+	nested()
 	for i := 1; i < 10; i++ {
-	if i%2 == 0
+		if i%2 == 0 {
+			log.Printf("%d", i)
+		}
 	}
-	fmt.Printf( " %d ", i)
 }
 
-// break  
-func nested() int {
+// break
+func nested() {
 	n := 5
 	for i := 0; i < n; i++ {
-			for j := 0; j <= i; j++ {
-					fmt.Print("*")
-			}
-			fmt.Println()
+		for j := 0; j <= i; j++ {
+			log.Println("*")
+		}
 	}
 }
